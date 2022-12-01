@@ -35,7 +35,7 @@ def get_vehicles(current_user_token):
     response = vehicles_schema.dump(vehicles)
     return jsonify(response)
 
-@api.rot('/vehicles/<id>', methods = ['GET'])
+@api.route('/vehicles/<id>', methods = ['GET'])
 @token_required
 def get_single_vehicle(current_user_token, id):
     vehicle = Vehicle.query.get(id)
