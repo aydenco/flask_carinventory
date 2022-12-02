@@ -68,7 +68,7 @@ class Vehicle(db.Model):
         return f'The following vehicle has been added to your inventory: {self.make} {self.model}'
     
     def set_id(self):
-        return (secret.token_urlsafe())
+        return (secrets.token_urlsafe())
 
 class VehicleSchema(ma.Schema):
     class Meta:
