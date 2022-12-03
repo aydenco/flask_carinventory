@@ -56,7 +56,7 @@ class Vehicle(db.Model):
     color = db.Column(db.String(25))
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
-    def __init__(self, make, model, year, user_token, color, id = ''):
+    def __init__(self, make, model, year, color, user_token, id = ''):
         self.id = self.set_id()
         self.make = make
         self.model = model
