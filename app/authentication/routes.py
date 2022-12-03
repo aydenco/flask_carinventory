@@ -5,17 +5,18 @@ from flask_login import login_user, logout_user, LoginManager, current_user, log
 
 auth = Blueprint('auth', __name__, template_folder='auth_templates')
 
-@auth.route('/signup', methods = ['GET','POST'])
+@auth.route('/signup', methods = ['GET', 'POST'])
 def signup():
     form = UserLoginForm()
 
     try:
-        if request.method =='POST' and form.vaidation_on_submit():
+        if request.method == 'POST' and form.validate_on_submit():
             email = form.email.data
             password = form.password.data
             print(email, password)
 
-            user = User(email, password= password)
+            user = User(email, password = password)
+
             db.session.add(user)
             db.session.commit()
 
