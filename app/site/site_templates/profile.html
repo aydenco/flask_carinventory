@@ -5,7 +5,7 @@
         <div class="container p-5 bg-dark">
             <div class="row">
                 <div class="d-md-flex bg-dark align-items-center justify-content-evenly">
-                    <h1 class="col text-center">{{ current_user.email}}'s user profile</h1>
+                    <h1 class="col text-center" style="color: #FED049">{{ current_user.email}}'s user profile</h1>
                 </div>
             </div>
         </div>
@@ -14,11 +14,10 @@
     <section class="text-center">
     <div class="container p-10">
         <div class="row"><br>
-            <h3 class="p-5">Here are your profile details</h3>
+            <h3 class="p-5" style="color: #3D5656">Here are your profile details</h3>
             <ul class="list-group">
-                <li class="list-group-item">Email: {{ current_user.email }}</li>
-                <li class="list-group-item">Token: {{ current_user.token }}</li> 
-                <li class="list-group-item">Will change this page</li> 
+                <li class="list-group-item" style="background-color: #68B984">Email: {{ current_user.email }}</li>
+                <li class="list-group-item" style="background-color: #68B984">Token: {{ current_user.token }}</li> 
             </ul>
         </div>
         <div class="row" style="margin-top: 20px;">
